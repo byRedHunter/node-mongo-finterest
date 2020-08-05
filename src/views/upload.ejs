@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Upload || Finterest</title>
+
+		<%- include('partials/head') %>
+	</head>
+	<body>
+		<%- include('partials/navigation') -%>
+
+		<div class="container p-4">
+			<div class="row">
+				<div class="col-md-4 offset-md-4">
+					<div class="card bg-success">
+						<div class="card-header">
+							<h1 class="h3 text-center">Upload your favorite picture</h1>
+						</div>
+						<div class="card-body">
+							<form
+								action="/upload"
+								method="POST"
+								enctype="multipart/form-data"
+							>
+								<div class="input-group mb-3">
+									<div class="custom-file">
+										<input
+											type="file"
+											class="custom-file-input"
+											id="image"
+											name="image"
+										/>
+										<label class="custom-file-label" for="image"
+											>Choose file</label
+										>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<input
+										type="text"
+										name="title"
+										placeholder="Title"
+										autocomplete="off"
+										class="form-control"
+									/>
+								</div>
+
+								<div class="form-group">
+									<textarea
+										name="description"
+										class="form-control"
+										placeholder="Description"
+									></textarea>
+								</div>
+
+								<div class="form-group text-center">
+									<button class="btn btn-primary px-5" type="submit">
+										Upload
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
